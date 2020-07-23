@@ -14,6 +14,7 @@ class BreedsView: UIView {
     
     let tableView: UITableView = {
         let tableView = UITableView()
+        tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()

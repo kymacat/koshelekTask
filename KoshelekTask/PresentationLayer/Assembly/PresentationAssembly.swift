@@ -12,7 +12,7 @@ protocol IPresentationAssembly {
     
     func rootTabBarController() -> UITabBarController
     
-    func breedsViewController() -> BreedsViewController
+    func breedsViewController(breeds: [BreedModel]?) -> BreedsViewController
 }
 
 class PresentationAssembly: IPresentationAssembly {
@@ -29,7 +29,7 @@ class PresentationAssembly: IPresentationAssembly {
         
         let tabBarController = UITabBarController()
         
-        let breedsController = breedsViewController()
+        let breedsController = breedsViewController(breeds: nil)
         breedsController.navigationItem.title = "Breeds"
         
         let navigationForBreeds = UINavigationController(rootViewController: breedsController)
@@ -53,14 +53,14 @@ class PresentationAssembly: IPresentationAssembly {
     
     // MARK: - BreedsViewController
     
-    func breedsViewController() -> BreedsViewController {
-        let model = breedsVCModel()
+    func breedsViewController(breeds: [BreedModel]?) -> BreedsViewController {
+        let model = breedsVCModel(breeds: breeds)
         let controller = BreedsViewController(model: model, assembly: self)
         return controller
     }
     
-    private func breedsVCModel() -> IBreedsVCModel {
-        return BreedsVCModel(breedsService: serviceAssembly.breedsService)
+    private func breedsVCModel(breeds: [BreedModel]?) -> IBreedsVCModel {
+        return BreedsVCModel(breedsService: serviceAssembly.breedsService, breeds: breeds)
     }
     
 }

@@ -24,13 +24,21 @@ class BreedsVCModel: IBreedsVCModel {
     
     var delegate: BreedsModelDelegate?
     
-    let service: IBreedsService
+    private let service: IBreedsService
     
-    init(breedsService: IBreedsService) {
+    private let data: [BreedModel]?
+    
+    init(breedsService: IBreedsService, breeds: [BreedModel]?) {
         self.service = breedsService
+        self.data = breeds
     }
     
     func fetchBreeds() {
+        
+        if let data = data {
+            delegate?.setBreeds(breeds: data)
+            return
+        }
         
         service.loadBreeds() { breeds, error in
             

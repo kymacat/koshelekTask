@@ -39,7 +39,12 @@ class BreedCell: UITableViewCell {
     
     // MARK: - Configure
     
+    var model: BreedModel?
+    
     func configure(with model: BreedModel) {
+        
+        self.model = model
+        
         breedLabel.text = model.name.capitalizingFirstLetter()
         
         if model.subbreeds.count != 0 {
@@ -50,11 +55,34 @@ class BreedCell: UITableViewCell {
         
     }
     
+    // MARK: - Animation
+    
+    func animationOfSelection() {
+        backgroundColor = .lightGray
+        UIView.animate(withDuration: 1) {
+            self.backgroundColor = .white
+        }
+    }
+    
     // MARK: - Fill
     
     private func fillView() {
         backgroundColor = .white
         accessoryType = .disclosureIndicator
+        selectionStyle = .none
+        
+        let separatorLine = UIView()
+        separatorLine.backgroundColor = Constants.Design.Color.cellsSeparatorColor
+        separatorLine.translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(separatorLine)
+        
+        NSLayoutConstraint.activate([
+            separatorLine.topAnchor.constraint(equalTo: topAnchor),
+            separatorLine.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+            separatorLine.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
+            separatorLine.heightAnchor.constraint(equalToConstant: 1)
+        ])
         
         addSubview(breedLabel)
         
@@ -73,6 +101,8 @@ class BreedCell: UITableViewCell {
     }
     
 }
+
+// MARK: - String extension
 
 extension String {
     

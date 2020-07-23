@@ -80,6 +80,34 @@ extension BreedsViewController: UITableViewDataSource {
 
 extension BreedsViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let cell = tableView.cellForRow(at: indexPath) as? BreedCell else {
+            return
+        }
+        
+        cell.animationOfSelection()
+        
+        let subbreeds = data[indexPath.row].subbreeds
+        
+        if subbreeds.count != 0 {
+            
+            var subbreedsModels = [BreedModel]()
+            
+            for subbreed in subbreeds {
+                let newSubbreed = BreedModel(name: subbreed, subbreeds: [])
+                subbreedsModels.append(newSubbreed)
+            }
+            
+            
+            let subbreedsController = assembly.breedsViewController(breeds: subbreedsModels)
+            subbreedsController.navigationItem.title = data[indexPath.row].name.capitalizingFirstLetter()
+            navigationController?.pushViewController(subbreedsController, animated: true)
+            
+        }
+        
+    }
+    
 }
 
 // MARK: - BreedsModelDelegate
