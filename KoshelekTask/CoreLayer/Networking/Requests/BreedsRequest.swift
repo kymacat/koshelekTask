@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BreadsRequest: IRequest {
+class BreedsRequest: IRequest {
     
     private var baseUrl: String = "https://dog.ceo/api/breeds/list/all"
 

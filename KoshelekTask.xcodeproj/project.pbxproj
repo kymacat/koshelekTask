@@ -18,10 +18,16 @@
 		CFF7240424C9AF9900F3F6ED /* IParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240324C9AF9900F3F6ED /* IParser.swift */; };
 		CFF7240724C9AFD700F3F6ED /* IRequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240624C9AFD700F3F6ED /* IRequestSender.swift */; };
 		CFF7240924C9B0CB00F3F6ED /* RequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240824C9B0CB00F3F6ED /* RequestSender.swift */; };
-		CFF7240B24C9B42B00F3F6ED /* BreadsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240A24C9B42B00F3F6ED /* BreadsRequest.swift */; };
-		CFF7240D24C9B4CE00F3F6ED /* BreadsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240C24C9B4CE00F3F6ED /* BreadsParser.swift */; };
+		CFF7240B24C9B42B00F3F6ED /* BreedsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240A24C9B42B00F3F6ED /* BreedsRequest.swift */; };
+		CFF7240D24C9B4CE00F3F6ED /* BreedsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240C24C9B4CE00F3F6ED /* BreedsParser.swift */; };
 		CFF7240F24C9B5C500F3F6ED /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240E24C9B5C500F3F6ED /* RequestFactory.swift */; };
-		CFF7241124C9BC3300F3F6ED /* BreadsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7241024C9BC3300F3F6ED /* BreadsService.swift */; };
+		CFF7241124C9BC3300F3F6ED /* BreedsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7241024C9BC3300F3F6ED /* BreedsService.swift */; };
+		CFF7241724C9CE1500F3F6ED /* BreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7241624C9CE1500F3F6ED /* BreedsViewController.swift */; };
+		CFF7241924C9CE3C00F3F6ED /* BreedsVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7241824C9CE3C00F3F6ED /* BreedsVCModel.swift */; };
+		CFF7241B24C9CEEC00F3F6ED /* BreedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7241A24C9CEEC00F3F6ED /* BreedsView.swift */; };
+		CFF7241D24C9E12F00F3F6ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7241C24C9E12F00F3F6ED /* Constants.swift */; };
+		CFF7241F24C9EC4300F3F6ED /* BreedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7241E24C9EC4300F3F6ED /* BreedCell.swift */; };
+		CFF7242124C9EDBE00F3F6ED /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7242024C9EDBE00F3F6ED /* BreedModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,10 +44,16 @@
 		CFF7240324C9AF9900F3F6ED /* IParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IParser.swift; sourceTree = "<group>"; };
 		CFF7240624C9AFD700F3F6ED /* IRequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRequestSender.swift; sourceTree = "<group>"; };
 		CFF7240824C9B0CB00F3F6ED /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
-		CFF7240A24C9B42B00F3F6ED /* BreadsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadsRequest.swift; sourceTree = "<group>"; };
-		CFF7240C24C9B4CE00F3F6ED /* BreadsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadsParser.swift; sourceTree = "<group>"; };
+		CFF7240A24C9B42B00F3F6ED /* BreedsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsRequest.swift; sourceTree = "<group>"; };
+		CFF7240C24C9B4CE00F3F6ED /* BreedsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsParser.swift; sourceTree = "<group>"; };
 		CFF7240E24C9B5C500F3F6ED /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
-		CFF7241024C9BC3300F3F6ED /* BreadsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadsService.swift; sourceTree = "<group>"; };
+		CFF7241024C9BC3300F3F6ED /* BreedsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsService.swift; sourceTree = "<group>"; };
+		CFF7241624C9CE1500F3F6ED /* BreedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewController.swift; sourceTree = "<group>"; };
+		CFF7241824C9CE3C00F3F6ED /* BreedsVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsVCModel.swift; sourceTree = "<group>"; };
+		CFF7241A24C9CEEC00F3F6ED /* BreedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsView.swift; sourceTree = "<group>"; };
+		CFF7241C24C9E12F00F3F6ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CFF7241E24C9EC4300F3F6ED /* BreedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCell.swift; sourceTree = "<group>"; };
+		CFF7242024C9EDBE00F3F6ED /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,7 @@
 				CFF723ED24C9AD1000F3F6ED /* CoreLayer */,
 				CFF723D824C9AAB600F3F6ED /* AppDelegate.swift */,
 				CFF723FB24C9ADE600F3F6ED /* RootAssembly.swift */,
+				CFF7241C24C9E12F00F3F6ED /* Constants.swift */,
 				CFF723EC24C9AB5B00F3F6ED /* Resources */,
 			);
 			path = KoshelekTask;
@@ -123,7 +136,7 @@
 		CFF723F224C9AD5000F3F6ED /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CFF7241024C9BC3300F3F6ED /* BreadsService.swift */,
+				CFF7241024C9BC3300F3F6ED /* BreedsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -148,6 +161,7 @@
 		CFF723F724C9ADA200F3F6ED /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CFF7241224C9CDDA00F3F6ED /* BreedsViewController */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -175,7 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF7240024C9AF6C00F3F6ED /* IRequest.swift */,
-				CFF7240A24C9B42B00F3F6ED /* BreadsRequest.swift */,
+				CFF7240A24C9B42B00F3F6ED /* BreedsRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -184,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF7240324C9AF9900F3F6ED /* IParser.swift */,
-				CFF7240C24C9B4CE00F3F6ED /* BreadsParser.swift */,
+				CFF7240C24C9B4CE00F3F6ED /* BreedsParser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -196,6 +210,42 @@
 				CFF7240824C9B0CB00F3F6ED /* RequestSender.swift */,
 			);
 			path = RequestManager;
+			sourceTree = "<group>";
+		};
+		CFF7241224C9CDDA00F3F6ED /* BreedsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7241524C9CDF700F3F6ED /* Model */,
+				CFF7241424C9CDF300F3F6ED /* View */,
+				CFF7241324C9CDED00F3F6ED /* Controller */,
+			);
+			path = BreedsViewController;
+			sourceTree = "<group>";
+		};
+		CFF7241324C9CDED00F3F6ED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7241624C9CE1500F3F6ED /* BreedsViewController.swift */,
+				CFF7241E24C9EC4300F3F6ED /* BreedCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFF7241424C9CDF300F3F6ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7241A24C9CEEC00F3F6ED /* BreedsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFF7241524C9CDF700F3F6ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7241824C9CE3C00F3F6ED /* BreedsVCModel.swift */,
+				CFF7242024C9EDBE00F3F6ED /* BreedModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,18 +318,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF7241F24C9EC4300F3F6ED /* BreedCell.swift in Sources */,
 				CFF7240F24C9B5C500F3F6ED /* RequestFactory.swift in Sources */,
+				CFF7241D24C9E12F00F3F6ED /* Constants.swift in Sources */,
 				CFF723F024C9AD3200F3F6ED /* CoreAssembly.swift in Sources */,
 				CFF723FA24C9ADC100F3F6ED /* PresentationAssembly.swift in Sources */,
 				CFF7240724C9AFD700F3F6ED /* IRequestSender.swift in Sources */,
+				CFF7241924C9CE3C00F3F6ED /* BreedsVCModel.swift in Sources */,
 				CFF723F524C9AD6F00F3F6ED /* ServicesAssembly.swift in Sources */,
-				CFF7241124C9BC3300F3F6ED /* BreadsService.swift in Sources */,
+				CFF7241124C9BC3300F3F6ED /* BreedsService.swift in Sources */,
+				CFF7242124C9EDBE00F3F6ED /* BreedModel.swift in Sources */,
+				CFF7241B24C9CEEC00F3F6ED /* BreedsView.swift in Sources */,
 				CFF7240124C9AF6C00F3F6ED /* IRequest.swift in Sources */,
-				CFF7240D24C9B4CE00F3F6ED /* BreadsParser.swift in Sources */,
+				CFF7240D24C9B4CE00F3F6ED /* BreedsParser.swift in Sources */,
 				CFF7240924C9B0CB00F3F6ED /* RequestSender.swift in Sources */,
+				CFF7241724C9CE1500F3F6ED /* BreedsViewController.swift in Sources */,
 				CFF723D924C9AAB600F3F6ED /* AppDelegate.swift in Sources */,
 				CFF7240424C9AF9900F3F6ED /* IParser.swift in Sources */,
-				CFF7240B24C9B42B00F3F6ED /* BreadsRequest.swift in Sources */,
+				CFF7240B24C9B42B00F3F6ED /* BreedsRequest.swift in Sources */,
 				CFF723FC24C9ADE600F3F6ED /* RootAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +475,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KoshelekTask/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,7 +495,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KoshelekTask/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BreadsResponse : Codable {
+struct BreedsResponse : Codable {
     let message: [String: [String]]
 
     enum CodingKeys: String, CodingKey {
@@ -17,15 +17,15 @@ struct BreadsResponse : Codable {
 }
 
 
-class BreadsParser: IParser {
+class BreedsParser: IParser {
     
     typealias Model = [String: [String]]
     
     func parse(data: Data) -> [String: [String]]? {
-        let breadsResponse = try? JSONDecoder().decode(BreadsResponse.self, from: data)
-        let breads = breadsResponse?.message
+        let breedsResponse = try? JSONDecoder().decode(BreedsResponse.self, from: data)
+        let breeds = breedsResponse?.message
     
-        return breads
+        return breeds
     }
     
 }

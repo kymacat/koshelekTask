@@ -10,9 +10,9 @@ import Foundation
 
 struct RequestsFactory {
     
-    static func breadsConfig() -> RequestConfig<BreadsParser> {
-        let request = BreadsRequest()
-        return RequestConfig<BreadsParser>(request: request, parser: BreadsParser())
+    static func breedsConfig() -> RequestConfig<BreedsParser> {
+        let request = BreedsRequest()
+        return RequestConfig<BreedsParser>(request: request, parser: BreedsParser())
     }
         
 }
