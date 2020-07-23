@@ -10,6 +10,10 @@
 		CFF723D924C9AAB600F3F6ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF723D824C9AAB600F3F6ED /* AppDelegate.swift */; };
 		CFF723E224C9AAB800F3F6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF723E124C9AAB800F3F6ED /* Assets.xcassets */; };
 		CFF723E524C9AAB800F3F6ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF723E324C9AAB800F3F6ED /* LaunchScreen.storyboard */; };
+		CFF723F024C9AD3200F3F6ED /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF723EF24C9AD3200F3F6ED /* CoreAssembly.swift */; };
+		CFF723F524C9AD6F00F3F6ED /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF723F424C9AD6F00F3F6ED /* ServicesAssembly.swift */; };
+		CFF723FA24C9ADC100F3F6ED /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF723F924C9ADC100F3F6ED /* PresentationAssembly.swift */; };
+		CFF723FC24C9ADE600F3F6ED /* RootAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF723FB24C9ADE600F3F6ED /* RootAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +22,10 @@
 		CFF723E124C9AAB800F3F6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFF723E424C9AAB800F3F6ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFF723E624C9AAB800F3F6ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFF723EF24C9AD3200F3F6ED /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
+		CFF723F424C9AD6F00F3F6ED /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
+		CFF723F924C9ADC100F3F6ED /* PresentationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
+		CFF723FB24C9ADE600F3F6ED /* RootAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +58,11 @@
 		CFF723D724C9AAB600F3F6ED /* KoshelekTask */ = {
 			isa = PBXGroup;
 			children = (
+				CFF723F624C9AD9100F3F6ED /* PresentationLayer */,
+				CFF723F124C9AD4500F3F6ED /* ServiceLayer */,
+				CFF723ED24C9AD1000F3F6ED /* CoreLayer */,
 				CFF723D824C9AAB600F3F6ED /* AppDelegate.swift */,
+				CFF723FB24C9ADE600F3F6ED /* RootAssembly.swift */,
 				CFF723EC24C9AB5B00F3F6ED /* Resources */,
 			);
 			path = KoshelekTask;
@@ -64,6 +76,70 @@
 				CFF723E624C9AAB800F3F6ED /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CFF723ED24C9AD1000F3F6ED /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CFF723EE24C9AD2000F3F6ED /* Assembly */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		CFF723EE24C9AD2000F3F6ED /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CFF723EF24C9AD3200F3F6ED /* CoreAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CFF723F124C9AD4500F3F6ED /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CFF723F324C9AD5700F3F6ED /* Assembly */,
+				CFF723F224C9AD5000F3F6ED /* Services */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		CFF723F224C9AD5000F3F6ED /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CFF723F324C9AD5700F3F6ED /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CFF723F424C9AD6F00F3F6ED /* ServicesAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CFF723F624C9AD9100F3F6ED /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CFF723F824C9ADA900F3F6ED /* Assembly */,
+				CFF723F724C9ADA200F3F6ED /* Modules */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		CFF723F724C9ADA200F3F6ED /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CFF723F824C9ADA900F3F6ED /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CFF723F924C9ADC100F3F6ED /* PresentationAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +212,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF723F024C9AD3200F3F6ED /* CoreAssembly.swift in Sources */,
+				CFF723FA24C9ADC100F3F6ED /* PresentationAssembly.swift in Sources */,
+				CFF723F524C9AD6F00F3F6ED /* ServicesAssembly.swift in Sources */,
 				CFF723D924C9AAB600F3F6ED /* AppDelegate.swift in Sources */,
+				CFF723FC24C9ADE600F3F6ED /* RootAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
