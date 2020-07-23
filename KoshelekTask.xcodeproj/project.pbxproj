@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CFF723D924C9AAB600F3F6ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF723D824C9AAB600F3F6ED /* AppDelegate.swift */; };
-		CFF723DB24C9AAB600F3F6ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF723DA24C9AAB600F3F6ED /* SceneDelegate.swift */; };
-		CFF723DD24C9AAB600F3F6ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF723DC24C9AAB600F3F6ED /* ViewController.swift */; };
-		CFF723E024C9AAB600F3F6ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF723DE24C9AAB600F3F6ED /* Main.storyboard */; };
 		CFF723E224C9AAB800F3F6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF723E124C9AAB800F3F6ED /* Assets.xcassets */; };
 		CFF723E524C9AAB800F3F6ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF723E324C9AAB800F3F6ED /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,9 +15,6 @@
 /* Begin PBXFileReference section */
 		CFF723D524C9AAB600F3F6ED /* KoshelekTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoshelekTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF723D824C9AAB600F3F6ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CFF723DA24C9AAB600F3F6ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CFF723DC24C9AAB600F3F6ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CFF723DF24C9AAB600F3F6ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFF723E124C9AAB800F3F6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFF723E424C9AAB800F3F6ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFF723E624C9AAB800F3F6ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,14 +51,19 @@
 			isa = PBXGroup;
 			children = (
 				CFF723D824C9AAB600F3F6ED /* AppDelegate.swift */,
-				CFF723DA24C9AAB600F3F6ED /* SceneDelegate.swift */,
-				CFF723DC24C9AAB600F3F6ED /* ViewController.swift */,
-				CFF723DE24C9AAB600F3F6ED /* Main.storyboard */,
+				CFF723EC24C9AB5B00F3F6ED /* Resources */,
+			);
+			path = KoshelekTask;
+			sourceTree = "<group>";
+		};
+		CFF723EC24C9AB5B00F3F6ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				CFF723E124C9AAB800F3F6ED /* Assets.xcassets */,
 				CFF723E324C9AAB800F3F6ED /* LaunchScreen.storyboard */,
 				CFF723E624C9AAB800F3F6ED /* Info.plist */,
 			);
-			path = KoshelekTask;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +126,6 @@
 			files = (
 				CFF723E524C9AAB800F3F6ED /* LaunchScreen.storyboard in Resources */,
 				CFF723E224C9AAB800F3F6ED /* Assets.xcassets in Resources */,
-				CFF723E024C9AAB600F3F6ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +136,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFF723DD24C9AAB600F3F6ED /* ViewController.swift in Sources */,
 				CFF723D924C9AAB600F3F6ED /* AppDelegate.swift in Sources */,
-				CFF723DB24C9AAB600F3F6ED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CFF723DE24C9AAB600F3F6ED /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CFF723DF24C9AAB600F3F6ED /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CFF723E324C9AAB800F3F6ED /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,17 +272,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G62NMGFRS3;
-				INFOPLIST_FILE = KoshelekTask/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = KoshelekTask/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OGI.KoshelekTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,17 +292,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G62NMGFRS3;
-				INFOPLIST_FILE = KoshelekTask/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = KoshelekTask/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OGI.KoshelekTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
