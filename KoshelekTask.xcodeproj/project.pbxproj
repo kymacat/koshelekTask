@@ -21,6 +21,7 @@
 		CFF7240B24C9B42B00F3F6ED /* BreadsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240A24C9B42B00F3F6ED /* BreadsRequest.swift */; };
 		CFF7240D24C9B4CE00F3F6ED /* BreadsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240C24C9B4CE00F3F6ED /* BreadsParser.swift */; };
 		CFF7240F24C9B5C500F3F6ED /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240E24C9B5C500F3F6ED /* RequestFactory.swift */; };
+		CFF7241124C9BC3300F3F6ED /* BreadsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7241024C9BC3300F3F6ED /* BreadsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CFF7240A24C9B42B00F3F6ED /* BreadsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadsRequest.swift; sourceTree = "<group>"; };
 		CFF7240C24C9B4CE00F3F6ED /* BreadsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadsParser.swift; sourceTree = "<group>"; };
 		CFF7240E24C9B5C500F3F6ED /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		CFF7241024C9BC3300F3F6ED /* BreadsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		CFF723F224C9AD5000F3F6ED /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CFF7241024C9BC3300F3F6ED /* BreadsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				CFF723FA24C9ADC100F3F6ED /* PresentationAssembly.swift in Sources */,
 				CFF7240724C9AFD700F3F6ED /* IRequestSender.swift in Sources */,
 				CFF723F524C9AD6F00F3F6ED /* ServicesAssembly.swift in Sources */,
+				CFF7241124C9BC3300F3F6ED /* BreadsService.swift in Sources */,
 				CFF7240124C9AF6C00F3F6ED /* IRequest.swift in Sources */,
 				CFF7240D24C9B4CE00F3F6ED /* BreadsParser.swift in Sources */,
 				CFF7240924C9B0CB00F3F6ED /* RequestSender.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol IServicesAssembly {
-    
+    var breadsService: IBreadsService { get }
 }
 
 class ServicesAssembly: IServicesAssembly {
@@ -19,5 +19,7 @@ class ServicesAssembly: IServicesAssembly {
     init(coreAssembly: ICoreAssembly) {
         self.coreAssembly = coreAssembly
     }
+    
+    lazy var breadsService: IBreadsService = BreadsService(requestSender: coreAssembly.requestSender)
     
 }
