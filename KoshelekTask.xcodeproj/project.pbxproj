@@ -14,6 +14,13 @@
 		CFF723F524C9AD6F00F3F6ED /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF723F424C9AD6F00F3F6ED /* ServicesAssembly.swift */; };
 		CFF723FA24C9ADC100F3F6ED /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF723F924C9ADC100F3F6ED /* PresentationAssembly.swift */; };
 		CFF723FC24C9ADE600F3F6ED /* RootAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF723FB24C9ADE600F3F6ED /* RootAssembly.swift */; };
+		CFF7240124C9AF6C00F3F6ED /* IRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240024C9AF6C00F3F6ED /* IRequest.swift */; };
+		CFF7240424C9AF9900F3F6ED /* IParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240324C9AF9900F3F6ED /* IParser.swift */; };
+		CFF7240724C9AFD700F3F6ED /* IRequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240624C9AFD700F3F6ED /* IRequestSender.swift */; };
+		CFF7240924C9B0CB00F3F6ED /* RequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240824C9B0CB00F3F6ED /* RequestSender.swift */; };
+		CFF7240B24C9B42B00F3F6ED /* BreadsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240A24C9B42B00F3F6ED /* BreadsRequest.swift */; };
+		CFF7240D24C9B4CE00F3F6ED /* BreadsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240C24C9B4CE00F3F6ED /* BreadsParser.swift */; };
+		CFF7240F24C9B5C500F3F6ED /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7240E24C9B5C500F3F6ED /* RequestFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		CFF723F424C9AD6F00F3F6ED /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		CFF723F924C9ADC100F3F6ED /* PresentationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
 		CFF723FB24C9ADE600F3F6ED /* RootAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAssembly.swift; sourceTree = "<group>"; };
+		CFF7240024C9AF6C00F3F6ED /* IRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRequest.swift; sourceTree = "<group>"; };
+		CFF7240324C9AF9900F3F6ED /* IParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IParser.swift; sourceTree = "<group>"; };
+		CFF7240624C9AFD700F3F6ED /* IRequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRequestSender.swift; sourceTree = "<group>"; };
+		CFF7240824C9B0CB00F3F6ED /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
+		CFF7240A24C9B42B00F3F6ED /* BreadsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadsRequest.swift; sourceTree = "<group>"; };
+		CFF7240C24C9B4CE00F3F6ED /* BreadsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadsParser.swift; sourceTree = "<group>"; };
+		CFF7240E24C9B5C500F3F6ED /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF723EE24C9AD2000F3F6ED /* Assembly */,
+				CFF723FE24C9AEA500F3F6ED /* Networking */,
 			);
 			path = CoreLayer;
 			sourceTree = "<group>";
@@ -140,6 +155,44 @@
 				CFF723F924C9ADC100F3F6ED /* PresentationAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CFF723FE24C9AEA500F3F6ED /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7240524C9AFC400F3F6ED /* RequestManager */,
+				CFF7240224C9AF8100F3F6ED /* Parsers */,
+				CFF723FF24C9AF5A00F3F6ED /* Requests */,
+				CFF7240E24C9B5C500F3F6ED /* RequestFactory.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CFF723FF24C9AF5A00F3F6ED /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7240024C9AF6C00F3F6ED /* IRequest.swift */,
+				CFF7240A24C9B42B00F3F6ED /* BreadsRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		CFF7240224C9AF8100F3F6ED /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7240324C9AF9900F3F6ED /* IParser.swift */,
+				CFF7240C24C9B4CE00F3F6ED /* BreadsParser.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		CFF7240524C9AFC400F3F6ED /* RequestManager */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7240624C9AFD700F3F6ED /* IRequestSender.swift */,
+				CFF7240824C9B0CB00F3F6ED /* RequestSender.swift */,
+			);
+			path = RequestManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,10 +265,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF7240F24C9B5C500F3F6ED /* RequestFactory.swift in Sources */,
 				CFF723F024C9AD3200F3F6ED /* CoreAssembly.swift in Sources */,
 				CFF723FA24C9ADC100F3F6ED /* PresentationAssembly.swift in Sources */,
+				CFF7240724C9AFD700F3F6ED /* IRequestSender.swift in Sources */,
 				CFF723F524C9AD6F00F3F6ED /* ServicesAssembly.swift in Sources */,
+				CFF7240124C9AF6C00F3F6ED /* IRequest.swift in Sources */,
+				CFF7240D24C9B4CE00F3F6ED /* BreadsParser.swift in Sources */,
+				CFF7240924C9B0CB00F3F6ED /* RequestSender.swift in Sources */,
 				CFF723D924C9AAB600F3F6ED /* AppDelegate.swift in Sources */,
+				CFF7240424C9AF9900F3F6ED /* IParser.swift in Sources */,
+				CFF7240B24C9B42B00F3F6ED /* BreadsRequest.swift in Sources */,
 				CFF723FC24C9ADE600F3F6ED /* RootAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
