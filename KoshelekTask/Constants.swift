@@ -52,6 +52,8 @@ struct Constants {
         
         static let breedCellReuseIdentifier = "breedCell"
         
+        static let galleryCellReuseIdentifier = "galaryCell"
+        
     }
 
 

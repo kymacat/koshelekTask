@@ -13,6 +13,8 @@ protocol IPresentationAssembly {
     func rootTabBarController() -> UITabBarController
     
     func breedsViewController(breeds: [BreedModel]?) -> BreedsViewController
+    
+    func galleryViewController(breed: BreedModel) -> GalleryViewController
 }
 
 class PresentationAssembly: IPresentationAssembly {
@@ -61,6 +63,18 @@ class PresentationAssembly: IPresentationAssembly {
     
     private func breedsVCModel(breeds: [BreedModel]?) -> IBreedsVCModel {
         return BreedsVCModel(breedsService: serviceAssembly.breedsService, breeds: breeds)
+    }
+    
+    // MARK: - GaleryViewController
+    
+    func galleryViewController(breed: BreedModel) -> GalleryViewController {
+        let model = galleryVCModel(breed: breed)
+        let controller = GalleryViewController(model: model, assembly: self)
+        return controller
+    }
+    
+    private func galleryVCModel(breed: BreedModel) -> GalleryVCModel {
+        return GalleryVCModel(service: serviceAssembly.galleryService, breed: breed)
     }
     
 }

@@ -14,5 +14,16 @@ struct RequestsFactory {
         let request = BreedsRequest()
         return RequestConfig<BreedsParser>(request: request, parser: BreedsParser())
     }
+    
+    static func breedImagesConfig(breed: String, subbreed: String?) -> RequestConfig<BreedImagesParser> {
+        let request = BreedImagesRequest(breed: breed, subbreed: subbreed)
+        return RequestConfig<BreedImagesParser>(request: request, parser: BreedImagesParser())
+    }
+    
+    static func imageConfig(imageUrl: String) -> RequestConfig<ImageParser> {
+        let request = ImageRequest(imageUrl: imageUrl)
+        return RequestConfig<ImageParser>(request: request, parser: ImageParser())
+    }
+
         
 }

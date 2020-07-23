@@ -9,6 +9,7 @@
 import Foundation
 
 struct BreedModel {
+    var parentBreed: String?
     let name: String
     let subbreeds: [String]
 }

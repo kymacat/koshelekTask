@@ -10,6 +10,7 @@ import Foundation
 
 protocol IServicesAssembly {
     var breedsService: IBreedsService { get }
+    var galleryService: IGalleryService { get }
 }
 
 class ServicesAssembly: IServicesAssembly {
@@ -21,5 +22,7 @@ class ServicesAssembly: IServicesAssembly {
     }
     
     lazy var breedsService: IBreedsService = BreedsService(requestSender: coreAssembly.requestSender)
+    
+    lazy var galleryService: IGalleryService = GalleryService(requestSender: coreAssembly.requestSender)
     
 }

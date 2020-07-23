@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CFE2B33C24CA2450006833B4 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B33B24CA2450006833B4 /* GalleryViewController.swift */; };
+		CFE2B33E24CA24BF006833B4 /* GalleryVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B33D24CA24BF006833B4 /* GalleryVCView.swift */; };
+		CFE2B34024CA24EC006833B4 /* GalleryVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B33F24CA24EC006833B4 /* GalleryVCModel.swift */; };
+		CFE2B34224CA3472006833B4 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B34124CA3472006833B4 /* GalleryCell.swift */; };
+		CFE2B34424CA3B3C006833B4 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B34324CA3B3C006833B4 /* ImageRequest.swift */; };
+		CFE2B34624CA3B85006833B4 /* ImageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B34524CA3B85006833B4 /* ImageParser.swift */; };
+		CFE2B34824CA3BC1006833B4 /* GalleryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B34724CA3BC1006833B4 /* GalleryService.swift */; };
+		CFE2B34A24CA3FA0006833B4 /* BreedImagesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B34924CA3FA0006833B4 /* BreedImagesRequest.swift */; };
+		CFE2B34C24CA40E9006833B4 /* BreedImagesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B34B24CA40E9006833B4 /* BreedImagesParser.swift */; };
 		CFF723D924C9AAB600F3F6ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF723D824C9AAB600F3F6ED /* AppDelegate.swift */; };
 		CFF723E224C9AAB800F3F6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF723E124C9AAB800F3F6ED /* Assets.xcassets */; };
 		CFF723E524C9AAB800F3F6ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF723E324C9AAB800F3F6ED /* LaunchScreen.storyboard */; };
@@ -31,6 +40,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CFE2B33B24CA2450006833B4 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		CFE2B33D24CA24BF006833B4 /* GalleryVCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVCView.swift; sourceTree = "<group>"; };
+		CFE2B33F24CA24EC006833B4 /* GalleryVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVCModel.swift; sourceTree = "<group>"; };
+		CFE2B34124CA3472006833B4 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		CFE2B34324CA3B3C006833B4 /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
+		CFE2B34524CA3B85006833B4 /* ImageParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageParser.swift; sourceTree = "<group>"; };
+		CFE2B34724CA3BC1006833B4 /* GalleryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryService.swift; sourceTree = "<group>"; };
+		CFE2B34924CA3FA0006833B4 /* BreedImagesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesRequest.swift; sourceTree = "<group>"; };
+		CFE2B34B24CA40E9006833B4 /* BreedImagesParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesParser.swift; sourceTree = "<group>"; };
 		CFF723D524C9AAB600F3F6ED /* KoshelekTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoshelekTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF723D824C9AAB600F3F6ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFF723E124C9AAB800F3F6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +85,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CFE2B33724CA241B006833B4 /* GalleryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CFE2B33A24CA2436006833B4 /* Model */,
+				CFE2B33924CA2431006833B4 /* View */,
+				CFE2B33824CA242B006833B4 /* Controller */,
+			);
+			path = GalleryViewController;
+			sourceTree = "<group>";
+		};
+		CFE2B33824CA242B006833B4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFE2B33B24CA2450006833B4 /* GalleryViewController.swift */,
+				CFE2B34124CA3472006833B4 /* GalleryCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFE2B33924CA2431006833B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFE2B33D24CA24BF006833B4 /* GalleryVCView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFE2B33A24CA2436006833B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFE2B33F24CA24EC006833B4 /* GalleryVCModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CFF723CC24C9AAB600F3F6ED = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF7241024C9BC3300F3F6ED /* BreedsService.swift */,
+				CFE2B34724CA3BC1006833B4 /* GalleryService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -162,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF7241224C9CDDA00F3F6ED /* BreedsViewController */,
+				CFE2B33724CA241B006833B4 /* GalleryViewController */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -190,6 +245,8 @@
 			children = (
 				CFF7240024C9AF6C00F3F6ED /* IRequest.swift */,
 				CFF7240A24C9B42B00F3F6ED /* BreedsRequest.swift */,
+				CFE2B34924CA3FA0006833B4 /* BreedImagesRequest.swift */,
+				CFE2B34324CA3B3C006833B4 /* ImageRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -199,6 +256,8 @@
 			children = (
 				CFF7240324C9AF9900F3F6ED /* IParser.swift */,
 				CFF7240C24C9B4CE00F3F6ED /* BreedsParser.swift */,
+				CFE2B34B24CA40E9006833B4 /* BreedImagesParser.swift */,
+				CFE2B34524CA3B85006833B4 /* ImageParser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -319,22 +378,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF7241F24C9EC4300F3F6ED /* BreedCell.swift in Sources */,
+				CFE2B34424CA3B3C006833B4 /* ImageRequest.swift in Sources */,
 				CFF7240F24C9B5C500F3F6ED /* RequestFactory.swift in Sources */,
+				CFE2B34224CA3472006833B4 /* GalleryCell.swift in Sources */,
 				CFF7241D24C9E12F00F3F6ED /* Constants.swift in Sources */,
 				CFF723F024C9AD3200F3F6ED /* CoreAssembly.swift in Sources */,
 				CFF723FA24C9ADC100F3F6ED /* PresentationAssembly.swift in Sources */,
+				CFE2B34C24CA40E9006833B4 /* BreedImagesParser.swift in Sources */,
+				CFE2B33E24CA24BF006833B4 /* GalleryVCView.swift in Sources */,
 				CFF7240724C9AFD700F3F6ED /* IRequestSender.swift in Sources */,
+				CFE2B34A24CA3FA0006833B4 /* BreedImagesRequest.swift in Sources */,
 				CFF7241924C9CE3C00F3F6ED /* BreedsVCModel.swift in Sources */,
+				CFE2B34824CA3BC1006833B4 /* GalleryService.swift in Sources */,
 				CFF723F524C9AD6F00F3F6ED /* ServicesAssembly.swift in Sources */,
 				CFF7241124C9BC3300F3F6ED /* BreedsService.swift in Sources */,
 				CFF7242124C9EDBE00F3F6ED /* BreedModel.swift in Sources */,
 				CFF7241B24C9CEEC00F3F6ED /* BreedsView.swift in Sources */,
 				CFF7240124C9AF6C00F3F6ED /* IRequest.swift in Sources */,
+				CFE2B34024CA24EC006833B4 /* GalleryVCModel.swift in Sources */,
 				CFF7240D24C9B4CE00F3F6ED /* BreedsParser.swift in Sources */,
 				CFF7240924C9B0CB00F3F6ED /* RequestSender.swift in Sources */,
 				CFF7241724C9CE1500F3F6ED /* BreedsViewController.swift in Sources */,
+				CFE2B34624CA3B85006833B4 /* ImageParser.swift in Sources */,
 				CFF723D924C9AAB600F3F6ED /* AppDelegate.swift in Sources */,
 				CFF7240424C9AF9900F3F6ED /* IParser.swift in Sources */,
+				CFE2B33C24CA2450006833B4 /* GalleryViewController.swift in Sources */,
 				CFF7240B24C9B42B00F3F6ED /* BreedsRequest.swift in Sources */,
 				CFF723FC24C9ADE600F3F6ED /* RootAssembly.swift in Sources */,
 			);

@@ -53,6 +53,19 @@ class BreedsViewController: UIViewController {
         
         model.fetchBreeds()
     }
+    
+     // MARK: - ErrorAlert
+    
+    private func showErrorAlert(with message: String) {
+           
+        let title = NSLocalizedString("Error", comment: "")
+           
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okAction)
+           
+        present(alert, animated: true, completion: nil)
+    }
 
 }
 
@@ -88,14 +101,16 @@ extension BreedsViewController: UITableViewDelegate {
         
         cell.animationOfSelection()
         
-        let subbreeds = data[indexPath.row].subbreeds
+        let breed = data[indexPath.row]
+        let subbreeds = breed.subbreeds
         
         if subbreeds.count != 0 {
             
             var subbreedsModels = [BreedModel]()
             
             for subbreed in subbreeds {
-                let newSubbreed = BreedModel(name: subbreed, subbreeds: [])
+                var newSubbreed = BreedModel(name: subbreed, subbreeds: [])
+                newSubbreed.parentBreed = breed.name
                 subbreedsModels.append(newSubbreed)
             }
             
@@ -103,6 +118,20 @@ extension BreedsViewController: UITableViewDelegate {
             let subbreedsController = assembly.breedsViewController(breeds: subbreedsModels)
             subbreedsController.navigationItem.title = data[indexPath.row].name.capitalizingFirstLetter()
             navigationController?.pushViewController(subbreedsController, animated: true)
+            
+        } else {
+            
+            let breed = data[indexPath.row]
+            
+            let galleryController = assembly.galleryViewController(breed: breed)
+            
+            if let parent = breed.parentBreed {
+                galleryController.navigationItem.title = breed.name.capitalizingFirstLetter() + " " + parent 
+            } else {
+                galleryController.navigationItem.title = breed.name.capitalizingFirstLetter()
+            }
+            
+            navigationController?.pushViewController(galleryController, animated: true)
             
         }
         
@@ -120,7 +149,7 @@ extension BreedsViewController: BreedsModelDelegate {
     }
     
     func showError(error: String) {
-        print(error)
+        showErrorAlert(with: error)
     }
     
     
