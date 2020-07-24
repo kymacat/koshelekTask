@@ -14,7 +14,7 @@ protocol IPresentationAssembly {
     
     func breedsViewController(breeds: [BreedModel]?) -> BreedsViewController
     
-    func galleryViewController(breed: BreedModel) -> GalleryViewController
+    func galleryViewController(breed: BreedModel, images: [BreedImageModel]?) -> GalleryViewController
     
     func favouritesViewController() -> FavouritesViewController
 }
@@ -86,14 +86,14 @@ class PresentationAssembly: IPresentationAssembly {
     
     // MARK: - GaleryViewController
     
-    func galleryViewController(breed: BreedModel) -> GalleryViewController {
-        let model = galleryVCModel(breed: breed)
+    func galleryViewController(breed: BreedModel, images: [BreedImageModel]?) -> GalleryViewController {
+        let model = galleryVCModel(breed: breed, images: images)
         let controller = GalleryViewController(model: model, assembly: self)
         return controller
     }
     
-    private func galleryVCModel(breed: BreedModel) -> GalleryVCModel {
-        return GalleryVCModel(service: serviceAssembly.galleryService, breed: breed)
+    private func galleryVCModel(breed: BreedModel, images: [BreedImageModel]?) -> GalleryVCModel {
+        return GalleryVCModel(service: serviceAssembly.galleryService, breed: breed, images: images)
     }
     
     // MARK: - FavouritesViewController

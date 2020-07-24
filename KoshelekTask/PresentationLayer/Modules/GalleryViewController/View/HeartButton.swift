@@ -29,9 +29,9 @@ class HeartButton: UIButton {
     var isLiked: Bool = false {
         didSet {
             if isLiked == true {
-                buttonTouchedIn(with: 0.25)
+                buttonTouchedIn(with: 0.1)
             } else {
-                buttonTouchedOut(with: 0.25)
+                buttonTouchedOut(with: 0.1)
             }
         }
     }

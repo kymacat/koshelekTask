@@ -138,7 +138,7 @@ extension BreedsViewController: UITableViewDelegate {
             
             let breed = data[indexPath.row]
             
-            let galleryController = assembly.galleryViewController(breed: breed)
+            let galleryController = assembly.galleryViewController(breed: breed, images: nil)
             
             if let parent = breed.parentBreed {
                 galleryController.navigationItem.title = breed.name.capitalizingFirstLetter() + " " + parent 

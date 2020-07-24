@@ -100,7 +100,38 @@ extension FavouritesViewController: UITableViewDelegate {
             return
         }
         
+        let breed = self.model.fetchedResultsController().object(at: indexPath)
+        
+        guard let images = breed.images?.allObjects as? [Image] else {
+            return
+        }
+        
         cell.animationOfSelection()
+        
+        var imageModels = [BreedImageModel]()
+        
+        for image in images {
+            
+            guard let url = image.url,
+                let imageData = image.image,
+                let breedImage = UIImage(data: imageData) else {
+                    continue
+            }
+            
+            let newModel = BreedImageModel(url: url, image: breedImage, isLiked: image.isliked)
+            
+            imageModels.append(newModel)
+        }
+        
+        
+        if let name = cell.model?.name {
+            let galleryController = assembly.galleryViewController(breed: BreedModel(parentBreed: nil, name: name, subbreeds: []), images: imageModels)
+            
+            galleryController.navigationItem.title = breed.name
+            
+            navigationController?.pushViewController(galleryController, animated: true)
+        }
+        
         
     }
 }

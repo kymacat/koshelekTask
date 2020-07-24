@@ -31,14 +31,22 @@ class GalleryVCModel: IGalleryVCModel {
     
     private let breedModel: BreedModel
     
-    init(service: IGalleryService, breed: BreedModel) {
+    private let breedImages: [BreedImageModel]?
+    
+    init(service: IGalleryService, breed: BreedModel, images: [BreedImageModel]?) {
         self.breedModel = breed
         self.service = service
+        self.breedImages = images
     }
     
     // MARK: - get images
     
     func getBreedImages() {
+        
+        if let images = breedImages {
+            delegate?.setImages(images: images)
+            return
+        }
         
         var breed = breedModel.name
         var subbreed: String? = nil
