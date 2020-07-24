@@ -22,6 +22,8 @@ class GalleryVCView: UIView {
         return collectionView
     }()
     
+    let hearthButton = HearthButton()
+    
     // MARK: - Init
     
     override init(frame: CGRect) {
@@ -46,6 +48,15 @@ class GalleryVCView: UIView {
             collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+        
+        addSubview(hearthButton)
+        
+        NSLayoutConstraint.activate([
+            hearthButton.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor, constant: -10),
+            hearthButton.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: -10),
+            hearthButton.heightAnchor.constraint(equalToConstant: 60),
+            hearthButton.widthAnchor.constraint(equalToConstant: 70)
         ])
     }
 }

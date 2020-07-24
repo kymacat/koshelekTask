@@ -28,6 +28,10 @@ struct Constants {
             
             static let breedsTabBarItemImage = UIImage(systemName: "list.bullet")
             
+            static let notEnabledHearthButtonImage = UIImage(systemName: "heart", withConfiguration: UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
+            
+            static let enabledHearthButtonImage = UIImage(systemName: "heart.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
+            
         }
 
         // MARK: - Fonts

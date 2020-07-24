@@ -12,10 +12,13 @@ protocol ICoreAssembly {
 
     var requestSender: IRequestSender { get }
     
+    var breedsFileManager: IBreedsFileManager { get }
 }
 
 class CoreAssembly: ICoreAssembly {
     
     lazy var requestSender: IRequestSender = RequestSender()
+    
+    lazy var breedsFileManager: IBreedsFileManager = BreedsFileManager()
     
 }

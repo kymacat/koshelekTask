@@ -25,7 +25,7 @@ class GalleryCell: UICollectionViewCell {
         return indicator
     }()
     
-    var imageUrl = ""
+    private var model: BreedImageModel?
     
     // MARK: - Init
     
@@ -39,18 +39,18 @@ class GalleryCell: UICollectionViewCell {
         fill()
     }
     
-    func configure(imageUrl: String) {
-        self.imageUrl = imageUrl
+    func configure(model: BreedImageModel) {
+        self.model = model
         self.imageView.image = .none
         
         activityIndicator.startAnimating()
         
-        self.delegate?.loadImage(imageUrl: imageUrl) { image, url, error in
+        self.delegate?.loadImage(imageUrl: model.url) { image, url, error in
             
             if let image = image {
                 
                 DispatchQueue.main.async {
-                    if self.imageUrl == url {
+                    if self.model?.url == url {
                         self.imageView.image = image
                         self.activityIndicator.stopAnimating()
                         UIView.transition(with: self.imageView,

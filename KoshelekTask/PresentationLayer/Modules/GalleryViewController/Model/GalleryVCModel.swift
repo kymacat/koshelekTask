@@ -9,7 +9,7 @@
 import UIKit
 
 protocol GalleryModelDelegate {
-    func setImages(images: [String])
+    func setImages(images: [BreedImageModel])
     func showError(error: String)
 }
 
@@ -19,6 +19,8 @@ protocol IGalleryVCModel {
     
     func getBreedImages()
     func getImageForCell(imageUrl: String, completionHandler: @escaping (UIImage?, String, String?) -> Void)
+    
+    func saveImages(images: [BreedImageModel])
 }
 
 class GalleryVCModel: IGalleryVCModel {
@@ -34,6 +36,8 @@ class GalleryVCModel: IGalleryVCModel {
         self.service = service
     }
     
+    // MARK: - get images
+    
     func getBreedImages() {
         
         var breed = breedModel.name
@@ -44,9 +48,15 @@ class GalleryVCModel: IGalleryVCModel {
             subbreed = breedModel.name
         }
         
+        var breedName = breed
+        
+        if let subbreed = subbreed {
+            breedName = subbreed + " " + breed
+        }
+        
         service.loadBreedAllImages(breed: breed, subbreed: subbreed) { images, error in
             
-            guard let images = images, error == nil else {
+            guard var images = images, error == nil else {
                 if let error = error {
                     DispatchQueue.main.async {
                         self.delegate?.showError(error: error)
@@ -54,6 +64,20 @@ class GalleryVCModel: IGalleryVCModel {
                 }
                 return
             }
+            
+            let data = self.service.getImagesFromBD(breedName: breedName)
+            
+            if let imagesFromDB = data.0 {
+                for (index, image) in images.enumerated() {
+                    for dbImage in imagesFromDB {
+                        if dbImage.url == image.url {
+                            images[index] = dbImage
+                            
+                        }
+                    }
+                }
+            }
+            
             
             DispatchQueue.main.async {
                 self.delegate?.setImages(images: images)
@@ -65,5 +89,28 @@ class GalleryVCModel: IGalleryVCModel {
     
     func getImageForCell(imageUrl: String, completionHandler: @escaping (UIImage?, String, String?) -> Void) {
         service.loadBreedImage(imageUrl: imageUrl, completionHandler: completionHandler)
+    }
+    
+    // MARK: - saveImages
+    
+    func saveImages(images: [BreedImageModel]) {
+        
+        var breed = breedModel.name
+        var subbreed: String? = nil
+        
+        if let parent = breedModel.parentBreed {
+            breed = parent
+            subbreed = breedModel.name
+        }
+        
+        var breedName = breed
+        
+        if let subbreed = subbreed {
+            breedName = subbreed + " " + breed
+        }
+        DispatchQueue.global(qos: .background).async {
+            self.service.saveBreed(name: breedName, images: images)
+        }
+        
     }
 }

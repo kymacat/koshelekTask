@@ -18,8 +18,7 @@ class GalleryViewController: UIViewController {
     
     private let galleryView = GalleryVCView()
     
-    private var breedImages = [String]()
-    private var cachedImages: [String: UIImage] = [:]
+    private var breedImages = [BreedImageModel]()
     
     private let reuseIdentifier = Constants.Content.galleryCellReuseIdentifier
     
@@ -57,11 +56,29 @@ class GalleryViewController: UIViewController {
         
         model.getBreedImages()
         
+        galleryView.hearthButton.addTarget(self, action: #selector(likeButtonAction(_:)), for: .touchUpInside)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         tabBarController?.tabBar.isHidden = false
+        model.saveImages(images: breedImages)
+    }
+    
+    @objc func likeButtonAction(_ sender: UIButton) {
+        
+        if let button = sender as? HearthButton {
+            
+            for cell in galleryView.collectionView.visibleCells {
+                if let indexPath = galleryView.collectionView.indexPath(for: cell) {
+                    breedImages[indexPath.row].isLiked = button.isLiked
+                }
+                
+            }
+
+        }
+        
     }
     
     // MARK: - ErrorAlert
@@ -93,10 +110,10 @@ extension GalleryViewController: UICollectionViewDataSource {
         
         cell.delegate = self
         
-        if let image = cachedImages[breedImages[indexPath.row]] {
+        if let image = breedImages[indexPath.row].image {
             cell.imageView.image = image
         } else {
-            cell.configure(imageUrl: breedImages[indexPath.row])
+            cell.configure(model: breedImages[indexPath.row])
         }
         
         return cell
@@ -109,6 +126,15 @@ extension GalleryViewController: UICollectionViewDataSource {
 
 extension GalleryViewController: UICollectionViewDelegate {
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        for cell in galleryView.collectionView.visibleCells {
+            if let indexPath = galleryView.collectionView.indexPath(for: cell) {
+                galleryView.hearthButton.isLiked = breedImages[indexPath.row].isLiked
+            }
+            
+        }
+    }
     
 }
 
@@ -137,8 +163,11 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
 
 extension GalleryViewController: GalleryModelDelegate {
     
-    func setImages(images: [String]) {
+    func setImages(images: [BreedImageModel]) {
         self.breedImages = images
+        if images.first?.isLiked == true {
+            galleryView.hearthButton.isLiked = true
+        }
         galleryView.collectionView.reloadData()
     }
     
@@ -154,9 +183,13 @@ extension GalleryViewController: GalleryModelDelegate {
 extension GalleryViewController: GalleryCellDelegate {
 
     func cacheImage(imageUrl: String, image: UIImage) {
-        cachedImages[imageUrl] = image
+        for (index, breedImage) in breedImages.enumerated() {
+            if breedImage.url == imageUrl && breedImage.image == nil {
+                breedImages[index].image = image
+            }
+        }
     }
-
+    
     func loadImage(imageUrl: String, completionHandler: @escaping (UIImage?, String, String?) -> Void) {
         model.getImageForCell(imageUrl: imageUrl, completionHandler: completionHandler)
     }

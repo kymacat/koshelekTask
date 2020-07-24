@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF0C0A2424CAF288008012BB /* HearthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A2324CAF288008012BB /* HearthButton.swift */; };
+		CF0C0A2624CB01CD008012BB /* BreedImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A2524CB01CD008012BB /* BreedImageModel.swift */; };
+		CF0C0A2A24CB150B008012BB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A2824CB150B008012BB /* Model.xcdatamodeld */; };
+		CF0C0A2D24CB1534008012BB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A2C24CB1534008012BB /* CoreDataStack.swift */; };
+		CF0C0A3324CB1794008012BB /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A2F24CB1794008012BB /* Breed.swift */; };
+		CF0C0A3524CB1794008012BB /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A3124CB1794008012BB /* Image.swift */; };
+		CF0C0A3824CB1812008012BB /* BreedsFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A3724CB1812008012BB /* BreedsFileManager.swift */; };
+		CF0C0A3A24CB1893008012BB /* BreedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A3924CB1893008012BB /* BreedEntity.swift */; };
 		CFE2B33C24CA2450006833B4 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B33B24CA2450006833B4 /* GalleryViewController.swift */; };
 		CFE2B33E24CA24BF006833B4 /* GalleryVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B33D24CA24BF006833B4 /* GalleryVCView.swift */; };
 		CFE2B34024CA24EC006833B4 /* GalleryVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B33F24CA24EC006833B4 /* GalleryVCModel.swift */; };
@@ -40,6 +48,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF0C0A2324CAF288008012BB /* HearthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearthButton.swift; sourceTree = "<group>"; };
+		CF0C0A2524CB01CD008012BB /* BreedImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImageModel.swift; sourceTree = "<group>"; };
+		CF0C0A2924CB150B008012BB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CF0C0A2C24CB1534008012BB /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		CF0C0A2F24CB1794008012BB /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		CF0C0A3124CB1794008012BB /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		CF0C0A3724CB1812008012BB /* BreedsFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsFileManager.swift; sourceTree = "<group>"; };
+		CF0C0A3924CB1893008012BB /* BreedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedEntity.swift; sourceTree = "<group>"; };
 		CFE2B33B24CA2450006833B4 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		CFE2B33D24CA24BF006833B4 /* GalleryVCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVCView.swift; sourceTree = "<group>"; };
 		CFE2B33F24CA24EC006833B4 /* GalleryVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVCModel.swift; sourceTree = "<group>"; };
@@ -85,6 +101,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF0C0A2B24CB1518008012BB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CF0C0A2C24CB1534008012BB /* CoreDataStack.swift */,
+				CF0C0A3B24CB18BC008012BB /* BreedsFileManager */,
+				CF0C0A2E24CB16CB008012BB /* Objects */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		CF0C0A2E24CB16CB008012BB /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				CF0C0A2F24CB1794008012BB /* Breed.swift */,
+				CF0C0A3124CB1794008012BB /* Image.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		CF0C0A3B24CB18BC008012BB /* BreedsFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				CF0C0A3924CB1893008012BB /* BreedEntity.swift */,
+				CF0C0A3724CB1812008012BB /* BreedsFileManager.swift */,
+			);
+			path = BreedsFileManager;
+			sourceTree = "<group>";
+		};
 		CFE2B33724CA241B006833B4 /* GalleryViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE2B33D24CA24BF006833B4 /* GalleryVCView.swift */,
+				CF0C0A2324CAF288008012BB /* HearthButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE2B33F24CA24EC006833B4 /* GalleryVCModel.swift */,
+				CF0C0A2524CB01CD008012BB /* BreedImageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF723E124C9AAB800F3F6ED /* Assets.xcassets */,
+				CF0C0A2824CB150B008012BB /* Model.xcdatamodeld */,
 				CFF723E324C9AAB800F3F6ED /* LaunchScreen.storyboard */,
 				CFF723E624C9AAB800F3F6ED /* Info.plist */,
 			);
@@ -165,6 +212,7 @@
 			children = (
 				CFF723EE24C9AD2000F3F6ED /* Assembly */,
 				CFF723FE24C9AEA500F3F6ED /* Networking */,
+				CF0C0A2B24CB1518008012BB /* CoreData */,
 			);
 			path = CoreLayer;
 			sourceTree = "<group>";
@@ -380,10 +428,13 @@
 				CFF7241F24C9EC4300F3F6ED /* BreedCell.swift in Sources */,
 				CFE2B34424CA3B3C006833B4 /* ImageRequest.swift in Sources */,
 				CFF7240F24C9B5C500F3F6ED /* RequestFactory.swift in Sources */,
+				CF0C0A2424CAF288008012BB /* HearthButton.swift in Sources */,
 				CFE2B34224CA3472006833B4 /* GalleryCell.swift in Sources */,
 				CFF7241D24C9E12F00F3F6ED /* Constants.swift in Sources */,
 				CFF723F024C9AD3200F3F6ED /* CoreAssembly.swift in Sources */,
+				CF0C0A2D24CB1534008012BB /* CoreDataStack.swift in Sources */,
 				CFF723FA24C9ADC100F3F6ED /* PresentationAssembly.swift in Sources */,
+				CF0C0A3524CB1794008012BB /* Image.swift in Sources */,
 				CFE2B34C24CA40E9006833B4 /* BreedImagesParser.swift in Sources */,
 				CFE2B33E24CA24BF006833B4 /* GalleryVCView.swift in Sources */,
 				CFF7240724C9AFD700F3F6ED /* IRequestSender.swift in Sources */,
@@ -393,18 +444,23 @@
 				CFF723F524C9AD6F00F3F6ED /* ServicesAssembly.swift in Sources */,
 				CFF7241124C9BC3300F3F6ED /* BreedsService.swift in Sources */,
 				CFF7242124C9EDBE00F3F6ED /* BreedModel.swift in Sources */,
+				CF0C0A3324CB1794008012BB /* Breed.swift in Sources */,
 				CFF7241B24C9CEEC00F3F6ED /* BreedsView.swift in Sources */,
 				CFF7240124C9AF6C00F3F6ED /* IRequest.swift in Sources */,
 				CFE2B34024CA24EC006833B4 /* GalleryVCModel.swift in Sources */,
+				CF0C0A2A24CB150B008012BB /* Model.xcdatamodeld in Sources */,
 				CFF7240D24C9B4CE00F3F6ED /* BreedsParser.swift in Sources */,
 				CFF7240924C9B0CB00F3F6ED /* RequestSender.swift in Sources */,
 				CFF7241724C9CE1500F3F6ED /* BreedsViewController.swift in Sources */,
 				CFE2B34624CA3B85006833B4 /* ImageParser.swift in Sources */,
 				CFF723D924C9AAB600F3F6ED /* AppDelegate.swift in Sources */,
+				CF0C0A3824CB1812008012BB /* BreedsFileManager.swift in Sources */,
 				CFF7240424C9AF9900F3F6ED /* IParser.swift in Sources */,
 				CFE2B33C24CA2450006833B4 /* GalleryViewController.swift in Sources */,
 				CFF7240B24C9B42B00F3F6ED /* BreedsRequest.swift in Sources */,
+				CF0C0A2624CB01CD008012BB /* BreedImageModel.swift in Sources */,
 				CFF723FC24C9ADE600F3F6ED /* RootAssembly.swift in Sources */,
+				CF0C0A3A24CB1893008012BB /* BreedEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +654,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CF0C0A2824CB150B008012BB /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CF0C0A2924CB150B008012BB /* Model.xcdatamodel */,
+			);
+			currentVersion = CF0C0A2924CB150B008012BB /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CFF723CD24C9AAB600F3F6ED /* Project object */;
 }
