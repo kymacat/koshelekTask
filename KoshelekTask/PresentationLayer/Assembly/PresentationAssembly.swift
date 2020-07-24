@@ -39,17 +39,6 @@ class PresentationAssembly: IPresentationAssembly {
         let navigationForBreeds = UINavigationController(rootViewController: breedsController)
         navigationForBreeds.tabBarItem.title = "List"
         
-        if let navigationTitleFont = Constants.Design.Font.navigationTitleFont {
-            navigationForBreeds.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: navigationTitleFont]
-        }
-        
-        if let tabBarItemTitleFont = Constants.Design.Font.tabBarItemTitleFont {
-            navigationForBreeds.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: tabBarItemTitleFont], for: .normal)
-        }
-        
-        navigationForBreeds.tabBarItem.image = Constants.Design.Image.breedsTabBarItemImage
-        
-        
         let favouritesController = favouritesViewController()
         favouritesController.navigationItem.title = "Favourites"
         
@@ -57,13 +46,16 @@ class PresentationAssembly: IPresentationAssembly {
         navigationForFavourites.tabBarItem.title = "Favourites"
         
         if let navigationTitleFont = Constants.Design.Font.navigationTitleFont {
+            navigationForBreeds.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: navigationTitleFont]
             navigationForFavourites.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: navigationTitleFont]
         }
         
         if let tabBarItemTitleFont = Constants.Design.Font.tabBarItemTitleFont {
+            navigationForBreeds.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: tabBarItemTitleFont], for: .normal)
             navigationForFavourites.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: tabBarItemTitleFont], for: .normal)
         }
         
+        navigationForBreeds.tabBarItem.image = Constants.Design.Image.breedsTabBarItemImage
         navigationForFavourites.tabBarItem.image = Constants.Design.Image.favouritesTabBarItemImage
         
         tabBarController.viewControllers = [navigationForBreeds, navigationForFavourites]

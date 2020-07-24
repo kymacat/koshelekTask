@@ -15,6 +15,7 @@ class BreedCell: UITableViewCell {
     let breedLabel: UILabel = {
         let label = UILabel()
         label.font = Constants.Design.Font.breedCellBreedLabelFont
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -22,6 +23,7 @@ class BreedCell: UITableViewCell {
     let subbreedLabel: UILabel = {
        let label = UILabel()
         label.font = Constants.Design.Font.breedCellSubbreedLabelFont
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

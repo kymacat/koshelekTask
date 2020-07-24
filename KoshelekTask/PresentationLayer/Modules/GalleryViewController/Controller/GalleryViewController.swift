@@ -58,6 +58,8 @@ class GalleryViewController: UIViewController {
         
         galleryView.heartButton.addTarget(self, action: #selector(likeButtonAction(_:)), for: .touchUpInside)
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareAction))
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -83,16 +85,43 @@ class GalleryViewController: UIViewController {
         
     }
     
+    @objc func shareAction() {
+              
+        let alert = UIAlertController(title: nil, message: "Share photo", preferredStyle: .actionSheet)
+        
+        let shareAction = UIAlertAction(title: "Share", style: .default) { action in
+            
+            for cell in self.galleryView.collectionView.visibleCells {
+                
+                if let indexPath = self.galleryView.collectionView.indexPath(for: cell) {
+                    if let image = self.breedImages[indexPath.row].image {
+                        let shareController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+                        self.present(shareController, animated: true)
+                    }
+                }
+                
+            }
+            
+            
+        }
+        
+        alert.addAction(shareAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
     // MARK: - ErrorAlert
     
     private func showErrorAlert(with message: String) {
               
-        let title = NSLocalizedString("Error", comment: "")
-              
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(okAction)
-              
+        
         present(alert, animated: true, completion: nil)
     }
     

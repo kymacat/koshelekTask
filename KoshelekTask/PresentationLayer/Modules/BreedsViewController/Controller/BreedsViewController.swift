@@ -73,9 +73,7 @@ class BreedsViewController: UIViewController {
     
     private func showErrorAlert(with message: String) {
            
-        let title = NSLocalizedString("Error", comment: "")
-           
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(okAction)
            
