@@ -18,7 +18,7 @@ public class Breed: NSManagedObject {
 extension Breed {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Breed> {
-        return NSFetchRequest<Breed>(entityName: "Breed")
+        return NSFetchRequest<Breed>(entityName: Constants.CoreData.Entities.breedEntityName)
     }
 
     @NSManaged public var name: String?

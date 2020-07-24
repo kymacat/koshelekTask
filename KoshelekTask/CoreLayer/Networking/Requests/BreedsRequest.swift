@@ -10,7 +10,7 @@ import Foundation
 
 class BreedsRequest: IRequest {
     
-    private var baseUrl: String = "https://dog.ceo/api/breeds/list/all"
+    private var baseUrl: String = Constants.API.listOfBreedsApiRequest
 
     private var urlString: String {
         return baseUrl

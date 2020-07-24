@@ -28,6 +28,8 @@ struct Constants {
             
             static let breedsTabBarItemImage = UIImage(systemName: "list.bullet")
             
+            static let favouritesTabBarItemImage = UIImage(systemName: "heart.fill")
+            
             static let notEnabledHearthButtonImage = UIImage(systemName: "heart", withConfiguration: UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
             
             static let enabledHearthButtonImage = UIImage(systemName: "heart.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
@@ -58,13 +60,33 @@ struct Constants {
         
         static let galleryCellReuseIdentifier = "galaryCell"
         
+        static let favouritesCellReuseIdentifier = "favouritesCell"
+        
     }
 
 
     // MARK: - API
 
     struct API {
+        static let listOfBreedsApiRequest = "https://dog.ceo/api/breeds/list/all"
         
+        static let breedImagesApiRequest = "https://dog.ceo/api/breed/"
+    }
+    
+    // MARK: - CoreData
+    
+    
+    struct CoreData {
+        
+        static let modelName = "Model"
+        
+        static let storeName = "Koshelek.sqlite"
+        
+        struct Entities {
+            static let breedEntityName = "Breed"
+            
+            static let imageEntityName = "Image"
+        }
     }
 
 }

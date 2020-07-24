@@ -11,6 +11,7 @@ import Foundation
 protocol IServicesAssembly {
     var breedsService: IBreedsService { get }
     var galleryService: IGalleryService { get }
+    var favouritesService: IFavouritesService { get }
 }
 
 class ServicesAssembly: IServicesAssembly {
@@ -24,5 +25,7 @@ class ServicesAssembly: IServicesAssembly {
     lazy var breedsService: IBreedsService = BreedsService(requestSender: coreAssembly.requestSender)
     
     lazy var galleryService: IGalleryService = GalleryService(requestSender: coreAssembly.requestSender, fileManager: coreAssembly.breedsFileManager)
+    
+    lazy var favouritesService: IFavouritesService = FavouritesService(fileManager: coreAssembly.breedsFileManager)
     
 }

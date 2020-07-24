@@ -10,8 +10,10 @@ import CoreData
 
 class CoreDataStack {
     
+    private let modelName = Constants.CoreData.modelName
+    
     private lazy var managedObjectModel: NSManagedObjectModel = {
-        guard let modelURL = Bundle.main.url(forResource: "Model", withExtension: "momd") else {
+        guard let modelURL = Bundle.main.url(forResource: modelName, withExtension: "momd") else {
             fatalError("Unable to Find Data Model")
         }
 
@@ -26,7 +28,7 @@ class CoreDataStack {
         let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
 
         let fileManager = FileManager.default
-        let storeName = "Koshelek.sqlite"
+        let storeName = Constants.CoreData.storeName
 
         let documentsDirectoryURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
 

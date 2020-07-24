@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF0C0A2424CAF288008012BB /* HearthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A2324CAF288008012BB /* HearthButton.swift */; };
+		CF0C0A2424CAF288008012BB /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A2324CAF288008012BB /* HeartButton.swift */; };
 		CF0C0A2624CB01CD008012BB /* BreedImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A2524CB01CD008012BB /* BreedImageModel.swift */; };
 		CF0C0A2A24CB150B008012BB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A2824CB150B008012BB /* Model.xcdatamodeld */; };
 		CF0C0A2D24CB1534008012BB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A2C24CB1534008012BB /* CoreDataStack.swift */; };
@@ -15,6 +15,11 @@
 		CF0C0A3524CB1794008012BB /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A3124CB1794008012BB /* Image.swift */; };
 		CF0C0A3824CB1812008012BB /* BreedsFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A3724CB1812008012BB /* BreedsFileManager.swift */; };
 		CF0C0A3A24CB1893008012BB /* BreedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C0A3924CB1893008012BB /* BreedEntity.swift */; };
+		CF4E069824CB445F005C5313 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E069724CB445F005C5313 /* FavouritesViewController.swift */; };
+		CF4E069A24CB4521005C5313 /* FavouritesVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E069924CB4521005C5313 /* FavouritesVCView.swift */; };
+		CF4E069F24CB484E005C5313 /* FavouritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E069E24CB484E005C5313 /* FavouritesService.swift */; };
+		CFB22B3C24CB4AA2003EC487 /* FavouritesVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB22B3B24CB4AA2003EC487 /* FavouritesVCModel.swift */; };
+		CFB22B3E24CB4F28003EC487 /* FavouritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB22B3D24CB4F28003EC487 /* FavouritesCell.swift */; };
 		CFE2B33C24CA2450006833B4 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B33B24CA2450006833B4 /* GalleryViewController.swift */; };
 		CFE2B33E24CA24BF006833B4 /* GalleryVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B33D24CA24BF006833B4 /* GalleryVCView.swift */; };
 		CFE2B34024CA24EC006833B4 /* GalleryVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2B33F24CA24EC006833B4 /* GalleryVCModel.swift */; };
@@ -48,7 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CF0C0A2324CAF288008012BB /* HearthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearthButton.swift; sourceTree = "<group>"; };
+		CF0C0A2324CAF288008012BB /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		CF0C0A2524CB01CD008012BB /* BreedImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImageModel.swift; sourceTree = "<group>"; };
 		CF0C0A2924CB150B008012BB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CF0C0A2C24CB1534008012BB /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -56,6 +61,11 @@
 		CF0C0A3124CB1794008012BB /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		CF0C0A3724CB1812008012BB /* BreedsFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsFileManager.swift; sourceTree = "<group>"; };
 		CF0C0A3924CB1893008012BB /* BreedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedEntity.swift; sourceTree = "<group>"; };
+		CF4E069724CB445F005C5313 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		CF4E069924CB4521005C5313 /* FavouritesVCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesVCView.swift; sourceTree = "<group>"; };
+		CF4E069E24CB484E005C5313 /* FavouritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesService.swift; sourceTree = "<group>"; };
+		CFB22B3B24CB4AA2003EC487 /* FavouritesVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesVCModel.swift; sourceTree = "<group>"; };
+		CFB22B3D24CB4F28003EC487 /* FavouritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCell.swift; sourceTree = "<group>"; };
 		CFE2B33B24CA2450006833B4 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		CFE2B33D24CA24BF006833B4 /* GalleryVCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVCView.swift; sourceTree = "<group>"; };
 		CFE2B33F24CA24EC006833B4 /* GalleryVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVCModel.swift; sourceTree = "<group>"; };
@@ -101,6 +111,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF0547C124CB3DAE00BAF2EA /* FavouritesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF4E069624CB42D9005C5313 /* Model */,
+				CF4E069524CB42D4005C5313 /* View */,
+				CF4E069424CB42CC005C5313 /* Controller */,
+			);
+			path = FavouritesViewController;
+			sourceTree = "<group>";
+		};
 		CF0C0A2B24CB1518008012BB /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +149,31 @@
 			path = BreedsFileManager;
 			sourceTree = "<group>";
 		};
+		CF4E069424CB42CC005C5313 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF4E069724CB445F005C5313 /* FavouritesViewController.swift */,
+				CFB22B3D24CB4F28003EC487 /* FavouritesCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF4E069524CB42D4005C5313 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF4E069924CB4521005C5313 /* FavouritesVCView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF4E069624CB42D9005C5313 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFB22B3B24CB4AA2003EC487 /* FavouritesVCModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CFE2B33724CA241B006833B4 /* GalleryViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE2B33D24CA24BF006833B4 /* GalleryVCView.swift */,
-				CF0C0A2324CAF288008012BB /* HearthButton.swift */,
+				CF0C0A2324CAF288008012BB /* HeartButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,6 +284,7 @@
 			children = (
 				CFF7241024C9BC3300F3F6ED /* BreedsService.swift */,
 				CFE2B34724CA3BC1006833B4 /* GalleryService.swift */,
+				CF4E069E24CB484E005C5313 /* FavouritesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -263,6 +309,7 @@
 		CFF723F724C9ADA200F3F6ED /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CF0547C124CB3DAE00BAF2EA /* FavouritesViewController */,
 				CFF7241224C9CDDA00F3F6ED /* BreedsViewController */,
 				CFE2B33724CA241B006833B4 /* GalleryViewController */,
 			);
@@ -428,7 +475,8 @@
 				CFF7241F24C9EC4300F3F6ED /* BreedCell.swift in Sources */,
 				CFE2B34424CA3B3C006833B4 /* ImageRequest.swift in Sources */,
 				CFF7240F24C9B5C500F3F6ED /* RequestFactory.swift in Sources */,
-				CF0C0A2424CAF288008012BB /* HearthButton.swift in Sources */,
+				CF4E069F24CB484E005C5313 /* FavouritesService.swift in Sources */,
+				CF0C0A2424CAF288008012BB /* HeartButton.swift in Sources */,
 				CFE2B34224CA3472006833B4 /* GalleryCell.swift in Sources */,
 				CFF7241D24C9E12F00F3F6ED /* Constants.swift in Sources */,
 				CFF723F024C9AD3200F3F6ED /* CoreAssembly.swift in Sources */,
@@ -438,11 +486,14 @@
 				CFE2B34C24CA40E9006833B4 /* BreedImagesParser.swift in Sources */,
 				CFE2B33E24CA24BF006833B4 /* GalleryVCView.swift in Sources */,
 				CFF7240724C9AFD700F3F6ED /* IRequestSender.swift in Sources */,
+				CF4E069824CB445F005C5313 /* FavouritesViewController.swift in Sources */,
 				CFE2B34A24CA3FA0006833B4 /* BreedImagesRequest.swift in Sources */,
 				CFF7241924C9CE3C00F3F6ED /* BreedsVCModel.swift in Sources */,
 				CFE2B34824CA3BC1006833B4 /* GalleryService.swift in Sources */,
 				CFF723F524C9AD6F00F3F6ED /* ServicesAssembly.swift in Sources */,
 				CFF7241124C9BC3300F3F6ED /* BreedsService.swift in Sources */,
+				CFB22B3E24CB4F28003EC487 /* FavouritesCell.swift in Sources */,
+				CFB22B3C24CB4AA2003EC487 /* FavouritesVCModel.swift in Sources */,
 				CFF7242124C9EDBE00F3F6ED /* BreedModel.swift in Sources */,
 				CF0C0A3324CB1794008012BB /* Breed.swift in Sources */,
 				CFF7241B24C9CEEC00F3F6ED /* BreedsView.swift in Sources */,
@@ -461,6 +512,7 @@
 				CF0C0A2624CB01CD008012BB /* BreedImageModel.swift in Sources */,
 				CFF723FC24C9ADE600F3F6ED /* RootAssembly.swift in Sources */,
 				CF0C0A3A24CB1893008012BB /* BreedEntity.swift in Sources */,
+				CF4E069A24CB4521005C5313 /* FavouritesVCView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

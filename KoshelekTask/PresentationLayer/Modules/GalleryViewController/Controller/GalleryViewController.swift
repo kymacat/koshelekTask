@@ -56,7 +56,7 @@ class GalleryViewController: UIViewController {
         
         model.getBreedImages()
         
-        galleryView.hearthButton.addTarget(self, action: #selector(likeButtonAction(_:)), for: .touchUpInside)
+        galleryView.heartButton.addTarget(self, action: #selector(likeButtonAction(_:)), for: .touchUpInside)
         
     }
     
@@ -66,9 +66,11 @@ class GalleryViewController: UIViewController {
         model.saveImages(images: breedImages)
     }
     
+    // MARK: - Selectors
+    
     @objc func likeButtonAction(_ sender: UIButton) {
         
-        if let button = sender as? HearthButton {
+        if let button = sender as? HeartButton {
             
             for cell in galleryView.collectionView.visibleCells {
                 if let indexPath = galleryView.collectionView.indexPath(for: cell) {
@@ -130,7 +132,7 @@ extension GalleryViewController: UICollectionViewDelegate {
         
         for cell in galleryView.collectionView.visibleCells {
             if let indexPath = galleryView.collectionView.indexPath(for: cell) {
-                galleryView.hearthButton.isLiked = breedImages[indexPath.row].isLiked
+                galleryView.heartButton.isLiked = breedImages[indexPath.row].isLiked
             }
             
         }
@@ -161,12 +163,14 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
     
 }
 
+// MARK: - GalleryModelDelegate
+
 extension GalleryViewController: GalleryModelDelegate {
     
     func setImages(images: [BreedImageModel]) {
         self.breedImages = images
         if images.first?.isLiked == true {
-            galleryView.hearthButton.isLiked = true
+            galleryView.heartButton.isLiked = true
         }
         galleryView.collectionView.reloadData()
     }

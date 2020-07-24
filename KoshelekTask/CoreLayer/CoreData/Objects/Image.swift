@@ -18,7 +18,7 @@ public class Image: NSManagedObject {
 extension Image {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Image> {
-        return NSFetchRequest<Image>(entityName: "Image")
+        return NSFetchRequest<Image>(entityName: Constants.CoreData.Entities.imageEntityName)
     }
 
     @NSManaged public var url: String?

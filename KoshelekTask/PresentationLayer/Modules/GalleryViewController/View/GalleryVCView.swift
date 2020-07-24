@@ -22,7 +22,7 @@ class GalleryVCView: UIView {
         return collectionView
     }()
     
-    let hearthButton = HearthButton()
+    let heartButton = HeartButton()
     
     // MARK: - Init
     
@@ -50,13 +50,13 @@ class GalleryVCView: UIView {
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
         
-        addSubview(hearthButton)
+        addSubview(heartButton)
         
         NSLayoutConstraint.activate([
-            hearthButton.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor, constant: -10),
-            hearthButton.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: -10),
-            hearthButton.heightAnchor.constraint(equalToConstant: 60),
-            hearthButton.widthAnchor.constraint(equalToConstant: 70)
+            heartButton.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor, constant: -10),
+            heartButton.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: -10),
+            heartButton.heightAnchor.constraint(equalToConstant: 60),
+            heartButton.widthAnchor.constraint(equalToConstant: 70)
         ])
     }
 }

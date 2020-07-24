@@ -21,6 +21,13 @@ class BreedsViewController: UIViewController {
     
     private var data = [BreedModel]()
     
+    let refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .black
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        return refreshControl
+    }()
+    
     
     // MARK: - Init
     
@@ -51,6 +58,14 @@ class BreedsViewController: UIViewController {
         
         breedsView.tableView.register(BreedCell.self, forCellReuseIdentifier: reuseIdentifier)
         
+        breedsView.tableView.refreshControl = refreshControl
+        refreshControl.beginRefreshing()
+        
+        model.fetchBreeds()
+    }
+    
+    @objc func refresh(sender: UIRefreshControl) {
+        refreshControl.beginRefreshing()
         model.fetchBreeds()
     }
     
@@ -146,10 +161,12 @@ extension BreedsViewController: BreedsModelDelegate {
     func setBreeds(breeds: [BreedModel]) {
         data = breeds
         breedsView.tableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     func showError(error: String) {
         showErrorAlert(with: error)
+        refreshControl.endRefreshing()
     }
     
     

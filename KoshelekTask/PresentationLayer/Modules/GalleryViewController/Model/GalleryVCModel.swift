@@ -87,6 +87,8 @@ class GalleryVCModel: IGalleryVCModel {
         
     }
     
+    // MARK: - Load one image
+    
     func getImageForCell(imageUrl: String, completionHandler: @escaping (UIImage?, String, String?) -> Void) {
         service.loadBreedImage(imageUrl: imageUrl, completionHandler: completionHandler)
     }

@@ -11,15 +11,36 @@ import CoreData
 protocol IBreedsFileManager {
     func saveImages(breedName: String, images: [BreedImageEntity])
     func fetchBreeds() -> ([Breed]?, Error?)
+    func fetchedResultsController() -> NSFetchedResultsController<Breed>
 }
 
 class BreedsFileManager: CoreDataStack, IBreedsFileManager {
+    
+    private let breedEntityName = Constants.CoreData.Entities.breedEntityName
+    private let imageEntityName = Constants.CoreData.Entities.imageEntityName
+    
+    
+    var fetchedController: NSFetchedResultsController<Breed>?
+    
+    override init() {
+        super.init()
+        let fetchRequest = NSFetchRequest<Breed>(entityName: breedEntityName)
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchedController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        
+    }
+    
+    func fetchedResultsController() -> NSFetchedResultsController<Breed> {
+        return fetchedController!
+    }
+    
     
     // MARK: - Save images
     
     func saveImages(breedName: String, images: [BreedImageEntity]) {
         
-        guard let entityDescription = NSEntityDescription.entity(forEntityName: "Breed", in: self.managedObjectContext) else {
+        guard let entityDescription = NSEntityDescription.entity(forEntityName: breedEntityName, in: self.managedObjectContext) else {
             print("entity description error")
             return
         }
@@ -49,6 +70,8 @@ class BreedsFileManager: CoreDataStack, IBreedsFileManager {
             return
         }
         
+        var deletedImagesCount = 0
+        
         for imageModel in images {
 
             var inBD = false
@@ -58,6 +81,7 @@ class BreedsFileManager: CoreDataStack, IBreedsFileManager {
 
                     if !imageModel.isLiked {
                         managedObjectContext.delete(dbImage)
+                        deletedImagesCount += 1
                     }
 
                     inBD = true
@@ -66,7 +90,7 @@ class BreedsFileManager: CoreDataStack, IBreedsFileManager {
 
             if !inBD && imageModel.isLiked {
 
-                guard let imageEntityDescription = NSEntityDescription.entity(forEntityName: "Image", in: self.managedObjectContext) else {
+                guard let imageEntityDescription = NSEntityDescription.entity(forEntityName: imageEntityName, in: self.managedObjectContext) else {
                     print("entity description error")
                     continue
                 }
@@ -81,7 +105,12 @@ class BreedsFileManager: CoreDataStack, IBreedsFileManager {
 
             }
         }
-
+        
+        if let newData = managedObject?.images?.allObjects as? [Image] {
+            if newData.count == 0 || newData.count == deletedImagesCount {
+                managedObjectContext.delete(managedObject!)
+            }
+        }
 
         self.saveContext(completion: nil)
     }
@@ -89,7 +118,7 @@ class BreedsFileManager: CoreDataStack, IBreedsFileManager {
     // MARK: - Fetch Breeds
     
     func fetchBreeds() -> ([Breed]?, Error?) {
-        let fetchRequest = NSFetchRequest<Breed>(entityName: "Breed")
+        let fetchRequest = NSFetchRequest<Breed>(entityName: breedEntityName)
         do {
             let breeds = try self.managedObjectContext.fetch(fetchRequest)
             return (breeds, nil)
